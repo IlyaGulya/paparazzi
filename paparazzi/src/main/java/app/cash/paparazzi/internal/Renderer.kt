@@ -20,6 +20,7 @@ import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Environment
 import app.cash.paparazzi.Flags
 import app.cash.paparazzi.Paparazzi
+import app.cash.paparazzi.ThumbnailScale
 import app.cash.paparazzi.deprecated.com.android.ide.common.resources.deprecated.FrameworkResources
 import app.cash.paparazzi.deprecated.com.android.ide.common.resources.deprecated.ResourceItem
 import app.cash.paparazzi.deprecated.com.android.ide.common.resources.deprecated.ResourceRepository
@@ -42,7 +43,7 @@ import kotlin.io.path.name
 internal class Renderer(
   private val environment: Environment,
   private val layoutlibCallback: PaparazziCallback,
-  private val logger: PaparazziLogger
+  private val logger: PaparazziLogger,
 ) : Closeable {
   private var bridge: Bridge? = null
   private lateinit var sessionParamsBuilder: SessionParamsBuilder
