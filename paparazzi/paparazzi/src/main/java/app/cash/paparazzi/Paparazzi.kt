@@ -74,8 +74,9 @@ import org.junit.rules.TestRule
 import org.junit.runner.Description
 import org.junit.runners.model.Statement
 import java.awt.image.BufferedImage
-import java.util.Date
+import java.util.*
 import java.util.concurrent.TimeUnit
+import kotlin.collections.ArrayDeque
 import kotlin.coroutines.ContinuationInterceptor
 
 class Paparazzi @JvmOverloads constructor(
@@ -86,7 +87,8 @@ class Paparazzi @JvmOverloads constructor(
   private val appCompatEnabled: Boolean = true,
   private val maxPercentDifference: Double = 0.1,
   private val snapshotHandler: SnapshotHandler = determineHandler(maxPercentDifference),
-  private val renderExtensions: Set<RenderExtension> = setOf()
+  private val renderExtensions: Set<RenderExtension> = setOf(),
+  private val thumbnailScale: ThumbnailScale = ThumbnailScale.ScaleMaxSideTo(DEFAULT_THUMBNAIL_SIZE)
 ) : TestRule {
   private val logger = PaparazziLogger()
   private lateinit var renderSession: RenderSessionImpl
@@ -150,7 +152,13 @@ class Paparazzi @JvmOverloads constructor(
     testName = description.toTestName()
 
     if (!isInitialized) {
-      renderer = Renderer(environment, layoutlibCallback, logger, maxPercentDifference)
+      renderer = Renderer(
+        environment = environment,
+        layoutlibCallback = layoutlibCallback,
+        logger = logger,
+        maxPercentDifference = maxPercentDifference,
+        thumbnailScale = thumbnailScale
+      )
       sessionParamsBuilder = renderer.prepare()
     }
 
@@ -369,7 +377,7 @@ class Paparazzi @JvmOverloads constructor(
   }
 
   private fun scaleImage(image: BufferedImage): BufferedImage {
-    val scale = ImageUtils.getThumbnailScale(image)
+    val scale = ImageUtils.getThumbnailScale(image, thumbnailScale)
     return ImageUtils.scale(image, scale, scale)
   }
 
@@ -595,6 +603,8 @@ class Paparazzi @JvmOverloads constructor(
   }
 
   companion object {
+    internal const val DEFAULT_THUMBNAIL_SIZE = 1000
+
     /** The choreographer doesn't like 0 as a frame time, so start an hour later. */
     internal val TIME_OFFSET_NANOS = TimeUnit.HOURS.toNanos(1L)
 

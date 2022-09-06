@@ -19,6 +19,7 @@ package app.cash.paparazzi.internal
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Environment
 import app.cash.paparazzi.Flags
+import app.cash.paparazzi.ThumbnailScale
 import app.cash.paparazzi.internal.parsers.LayoutPullParser
 import com.android.ide.common.rendering.api.SessionParams
 import com.android.ide.common.resources.deprecated.FrameworkResources
@@ -39,7 +40,8 @@ internal class Renderer(
   private val environment: Environment,
   private val layoutlibCallback: PaparazziCallback,
   private val logger: PaparazziLogger,
-  private val maxPercentDifference: Double
+  private val maxPercentDifference: Double,
+  private val thumbnailScale: ThumbnailScale
 ) : Closeable {
   private var bridge: Bridge? = null
   private lateinit var sessionParamsBuilder: SessionParamsBuilder
@@ -168,7 +170,7 @@ internal class Renderer(
   ) {
     try {
       val goldenImagePath = environment.appTestDir + "/golden/" + goldenImageName
-      ImageUtils.requireSimilar(goldenImagePath, image, maxPercentDifference)
+      ImageUtils.requireSimilar(goldenImagePath, image, maxPercentDifference, thumbnailScale)
     } catch (e: IOException) {
       logger.error(e, e.message)
     }
