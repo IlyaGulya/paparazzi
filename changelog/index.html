@@ -1,0 +1,1401 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Android screenshots without Android">
+      
+      
+        <meta name="author" content="Square, Inc.">
+      
+      
+        <link rel="canonical" href="https://cashapp.github.io/paparazzi/changelog/">
+      
+      
+        <link rel="prev" href="../1.x/paparazzi/app.cash.paparazzi/">
+      
+      
+        <link rel="next" href="../code_of_conduct/">
+      
+      <link rel="icon" href="../images/icon-square.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Change Log - Paparazzi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/app.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#change-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Paparazzi" class="md-header__button md-logo" aria-label="Paparazzi" data-md-component="logo">
+      
+  <img src="../images/icon-square.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Paparazzi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Change Log
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cashapp/paparazzi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Paparazzi
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Paparazzi" class="md-nav__button md-logo" aria-label="Paparazzi" data-md-component="logo">
+      
+  <img src="../images/icon-square.png" alt="logo">
+
+    </a>
+    Paparazzi
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cashapp/paparazzi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Paparazzi
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.x/paparazzi/app.cash.paparazzi/" class="md-nav__link">
+        1.x API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Change Log
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Change Log
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    Unreleased
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-2023-07-18" class="md-nav__link">
+    1.3.1 - 2023-07-18
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.1 - 2023-07-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-2023-05-31" class="md-nav__link">
+    1.3.0 - 2023-05-31
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.0 - 2023-05-31">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_1" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_1" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-2023-01-18" class="md-nav__link">
+    1.2.0 - 2023-01-18
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.0 - 2023-01-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_2" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_2" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-2022-10-12" class="md-nav__link">
+    1.1.0 - 2022-10-12
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0 - 2022-10-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_3" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_3" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-2022-06-03" class="md-nav__link">
+    1.0.0 - 2022-06-03
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0 - 2022-06-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_4" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_4" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#093-2022-01-20" class="md-nav__link">
+    0.9.3 - 2022-01-20
+  </a>
+  
+    <nav class="md-nav" aria-label="0.9.3 - 2022-01-20">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_5" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#092-2022-01-20" class="md-nav__link">
+    0.9.2 - 2022-01-20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091-2022-01-14" class="md-nav__link">
+    0.9.1 - 2022-01-14
+  </a>
+  
+    <nav class="md-nav" aria-label="0.9.1 - 2022-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_6" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#090-2021-11-22" class="md-nav__link">
+    0.9.0 - 2021-11-22
+  </a>
+  
+    <nav class="md-nav" aria-label="0.9.0 - 2021-11-22">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_5" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_7" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#080-2021-10-07" class="md-nav__link">
+    0.8.0 - 2021-10-07
+  </a>
+  
+    <nav class="md-nav" aria-label="0.8.0 - 2021-10-07">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_6" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_8" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#071-2021-05-17" class="md-nav__link">
+    0.7.1 - 2021-05-17
+  </a>
+  
+    <nav class="md-nav" aria-label="0.7.1 - 2021-05-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_7" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_9" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070-2021-02-26" class="md-nav__link">
+    0.7.0 - 2021-02-26
+  </a>
+  
+    <nav class="md-nav" aria-label="0.7.0 - 2021-02-26">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_8" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_10" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060-2020-10-02" class="md-nav__link">
+    0.6.0 - 2020-10-02
+  </a>
+  
+    <nav class="md-nav" aria-label="0.6.0 - 2020-10-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_9" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#052-2020-09-17" class="md-nav__link">
+    0.5.2 - 2020-09-17
+  </a>
+  
+    <nav class="md-nav" aria-label="0.5.2 - 2020-09-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_11" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#051-2020-09-17" class="md-nav__link">
+    0.5.1 - 2020-09-17
+  </a>
+  
+    <nav class="md-nav" aria-label="0.5.1 - 2020-09-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_12" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050-2020-09-16" class="md-nav__link">
+    0.5.0 - 2020-09-16
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code_of_conduct/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://stackoverflow.com/questions/tagged/paparazzi?sort=active" class="md-nav__link">
+        Stack Overflow ⏏
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    Unreleased
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-2023-07-18" class="md-nav__link">
+    1.3.1 - 2023-07-18
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.1 - 2023-07-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-2023-05-31" class="md-nav__link">
+    1.3.0 - 2023-05-31
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.0 - 2023-05-31">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_1" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_1" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-2023-01-18" class="md-nav__link">
+    1.2.0 - 2023-01-18
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.0 - 2023-01-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_2" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_2" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-2022-10-12" class="md-nav__link">
+    1.1.0 - 2022-10-12
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0 - 2022-10-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_3" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_3" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-2022-06-03" class="md-nav__link">
+    1.0.0 - 2022-06-03
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0 - 2022-06-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_4" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_4" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#093-2022-01-20" class="md-nav__link">
+    0.9.3 - 2022-01-20
+  </a>
+  
+    <nav class="md-nav" aria-label="0.9.3 - 2022-01-20">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_5" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#092-2022-01-20" class="md-nav__link">
+    0.9.2 - 2022-01-20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091-2022-01-14" class="md-nav__link">
+    0.9.1 - 2022-01-14
+  </a>
+  
+    <nav class="md-nav" aria-label="0.9.1 - 2022-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_6" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#090-2021-11-22" class="md-nav__link">
+    0.9.0 - 2021-11-22
+  </a>
+  
+    <nav class="md-nav" aria-label="0.9.0 - 2021-11-22">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_5" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_7" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#080-2021-10-07" class="md-nav__link">
+    0.8.0 - 2021-10-07
+  </a>
+  
+    <nav class="md-nav" aria-label="0.8.0 - 2021-10-07">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_6" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_8" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#071-2021-05-17" class="md-nav__link">
+    0.7.1 - 2021-05-17
+  </a>
+  
+    <nav class="md-nav" aria-label="0.7.1 - 2021-05-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_7" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_9" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070-2021-02-26" class="md-nav__link">
+    0.7.0 - 2021-02-26
+  </a>
+  
+    <nav class="md-nav" aria-label="0.7.0 - 2021-02-26">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_8" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_10" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060-2020-10-02" class="md-nav__link">
+    0.6.0 - 2020-10-02
+  </a>
+  
+    <nav class="md-nav" aria-label="0.6.0 - 2020-10-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_9" class="md-nav__link">
+    New
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#052-2020-09-17" class="md-nav__link">
+    0.5.2 - 2020-09-17
+  </a>
+  
+    <nav class="md-nav" aria-label="0.5.2 - 2020-09-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_11" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#051-2020-09-17" class="md-nav__link">
+    0.5.1 - 2020-09-17
+  </a>
+  
+    <nav class="md-nav" aria-label="0.5.1 - 2020-09-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_12" class="md-nav__link">
+    Fixed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050-2020-09-16" class="md-nav__link">
+    0.5.0 - 2020-09-16
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h1>
+<h2 id="unreleased"><a href="https://github.com/cashapp/paparazzi/compare/1.3.1...HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permanent link">&para;</a></h2>
+<h2 id="131-2023-07-18"><a href="https://github.com/cashapp/paparazzi/releases/tag/1.3.1">1.3.1</a> - 2023-07-18<a class="headerlink" href="#131-2023-07-18" title="Permanent link">&para;</a></h2>
+<h3 id="new">New<a class="headerlink" href="#new" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Migrated to new resource and asset loading mechanisms.  To explicitly opt-out and fall back to the
+legacy mechanisms, add either/both of the following to your <code>gradle.properties</code>:
+<div class="highlight"><pre><span></span><code>app.cash.paparazzi.legacy.resource.loading=true
+app.cash.paparazzi.legacy.asset.loading=true
+</code></pre></div></p>
+</li>
+<li>
+<p>The Android system ui (status + navigation bar) is now hidden by default; to re-enable:
+<div class="highlight"><pre><span></span><code>  @get:Rule
+  val paparazzi = Paparazzi(
+    showSystemUi = true
+  )
+</code></pre></div></p>
+</li>
+<li>
+<p>Relocate failure deltas from <code>PROJECT_ROOT/out/failures/</code> to <code>BUILD_DIR/paparazzi/failures/</code></p>
+</li>
+<li>Support for application and dynamic feature modules</li>
+<li>[Gradle Plugin] Gradle 8.2.1</li>
+</ul>
+<h3 id="fixed">Fixed<a class="headerlink" href="#fixed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix accessibility labels when mergeDescendants is true</li>
+<li>Fixes compose alert dialogs not rendering when using RenderingMode.SHRINK</li>
+</ul>
+<p>Kudos to @kevinzheng-ap, @adamalyyan and others for contributions this release!</p>
+<h2 id="130-2023-05-31"><a href="https://github.com/cashapp/paparazzi/releases/tag/1.3.0">1.3.0</a> - 2023-05-31<a class="headerlink" href="#130-2023-05-31" title="Permanent link">&para;</a></h2>
+<p>As of this release, consumers must build on Java 17+ environments.</p>
+<h3 id="new_1">New<a class="headerlink" href="#new_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Migrate Paparazzi to layoutlib Flamingo 2022.2.1</li>
+<li>Add accessibility support for Composables</li>
+<li>Add layout accessibility check support</li>
+<li>Compose 1.4.7</li>
+<li>Kotlin 1.8.21</li>
+<li>[Gradle Plugin] Gradle 8.1.1</li>
+<li>[Gradle Plugin] Android Gradle Plugin 8.0.2</li>
+</ul>
+<h3 id="fixed_1">Fixed<a class="headerlink" href="#fixed_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configure android.os.Build values via reflection</li>
+<li>Various bug fixes with AccessibilityRenderExtension</li>
+<li>Make sure changes to system properties actually affect test tasks</li>
+<li>Fix caching bug with preparePaparazziResources task</li>
+<li>Use Dispatchers.Main for delay functionality</li>
+<li>Recomposition does not happen unless lifecycle is RESUMED</li>
+<li>Fix NPE when unit test variant is disabled</li>
+<li>Fix incompatibility with androidx.savedstate:1.1.0</li>
+</ul>
+<p>Kudos to @gamepro65, @geoff-powell, @TWiStErRob, @adamalyyan and others for contributions this release!</p>
+<h2 id="120-2023-01-18"><a href="https://github.com/cashapp/paparazzi/releases/tag/1.2.0">1.2.0</a> - 2023-01-18<a class="headerlink" href="#120-2023-01-18" title="Permanent link">&para;</a></h2>
+<h3 id="new_2">New<a class="headerlink" href="#new_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Migrate Paparazzi to layoutlib Electric Eel 2022.1.1</li>
+<li>Add support for RenderingMode.SHRINK to allow view-only screenshots</li>
+<li>Expose flag to show/hide system ui</li>
+<li>Register a default OnBackPressedDispatcherOwner if its present in classpath</li>
+<li>Bump default compileSdk to API 33</li>
+<li>Compose 1.3.1</li>
+<li>Kotlin 1.7.20</li>
+<li>[Gradle Plugin] Gradle 7.6</li>
+<li>[Gradle Plugin] Android Gradle Plugin 7.4.0</li>
+</ul>
+<h3 id="fixed_2">Fixed<a class="headerlink" href="#fixed_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Flush errors on unsafeUpdateConfig</li>
+<li>Only apply wear circle shape to full device screenshots</li>
+<li>Synchronize access to Handler_Delegate.queue</li>
+<li>Apply compose hooks to all snapshot calls</li>
+<li>Register LifecycleOwner and SavedStateRegistryOwner to all views</li>
+<li>Execute Handler callbacks after snapshots to clean up Compose references</li>
+<li>Fix RecyclerView issue due to layoutlib Dolphin update</li>
+<li>Keep AGP and tools dependencies aligned</li>
+</ul>
+<p>Kudos to @gamepro65, @saket, @rharter and others for contributions this release!</p>
+<h2 id="110-2022-10-12"><a href="https://github.com/cashapp/paparazzi/releases/tag/1.1.0">1.1.0</a> - 2022-10-12<a class="headerlink" href="#110-2022-10-12" title="Permanent link">&para;</a></h2>
+<h3 id="new_3">New<a class="headerlink" href="#new_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Migrate Paparazzi to layoutlib Chipmunk 2021.2.1</li>
+<li>Add support for multiplatform plugin</li>
+<li>Add support for JDKs 16+</li>
+<li>Add support for locales and layout direction (LTR/RTL)</li>
+<li>Add Pixel 6 &amp; Pixel 6 Pro device configs</li>
+<li>Enable night mode for legacy views and composables</li>
+<li>Enable ui mode to support form factors other than phones/tablets, e.g., auto, watches, etc.</li>
+<li>Google Wear DeviceConfig support</li>
+<li>Expose an API for offsetting frame capture time</li>
+<li>Add InstantAnimationsRule to delay snapshot capture until the last frame.</li>
+<li>Compose 1.3.0</li>
+<li>Kotlin 1.7.10</li>
+<li>[Gradle Plugin] Gradle 7.5.1</li>
+</ul>
+<h3 id="fixed_3">Fixed<a class="headerlink" href="#fixed_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Generate resource ids to support aapt inline resources in composables</li>
+<li>Reset AndroidUiDispatcher between compose snapshots</li>
+<li>Fix OOM error when a large number of compose snapshots are verified</li>
+<li>Fix HTML report in development mode</li>
+<li>Honor customization of Gradle&rsquo;s build output directory</li>
+<li>[Gradle Plugin] Configure native platform transformed path directly in test task to reduce cache misses</li>
+<li>[Gradle Plugin] Fix accidental eager task creation reducing memory pressure</li>
+<li>[Gradle Plugin] Fail explicitly when applying Android application plugin</li>
+</ul>
+<p>Kudos to @chris-horner, @swankjesse, @yschimke, @dniHze, @TWiStErRob, @gamepro65, @liutikas and others for contributions this release!</p>
+<h2 id="100-2022-06-03"><a href="https://github.com/cashapp/paparazzi/releases/tag/1.0.0">1.0.0</a> - 2022-06-03<a class="headerlink" href="#100-2022-06-03" title="Permanent link">&para;</a></h2>
+<h3 id="new_4">New<a class="headerlink" href="#new_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Support for Composable snapshots</li>
+<li>Migrate Paparazzi to layoutlib Bumblebee 2021.1.1 for better rendering and API 31 support</li>
+<li>Update Paparazzi configuration via new <code>unsafeUpdateConfig</code> method instead of <code>snapshot</code>/<code>gif</code></li>
+<li>Cache Paparazzi bootstrap logic for better performance per test suite</li>
+<li>Surface internally thrown exceptions from layoutlib</li>
+<li>Throw a more helpful exception if Android platform is missing</li>
+<li>Bump default compileSdk to API 31</li>
+<li>Compose 1.1.1</li>
+<li>Kotlin 1.6.10</li>
+<li>[Gradle Plugin] Gradle 7.4.2</li>
+<li>[Gradle Plugin] Android Gradle Plugin 7.1.2</li>
+</ul>
+<h3 id="fixed_4">Fixed<a class="headerlink" href="#fixed_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prepend paths with file:// for clickable error output in IDE</li>
+<li>Update default SDK path on Linux</li>
+<li>Fix accessibility test logic to avoid unnecessary coloring changes on updated view ids</li>
+<li>Fixes crash when using InputMethodManager to show/hide keyboard</li>
+<li>Temporarily work around Compose runtime memory leaks</li>
+<li>[Gradle Plugin] Prefer namespace DSL declaration over manifest package declaration</li>
+<li>[Gradle Plugin] Publish plugin marker on snapshot builds</li>
+<li>[Gradle Plugin] Exclude androidTest sourceSets during paparazzi runs</li>
+</ul>
+<p>Kudos to @luis-cortes, @nak5ive, @alexvanyo, @gamepro65 and others for contributions this release!</p>
+<h2 id="093-2022-01-20"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.9.3">0.9.3</a> - 2022-01-20<a class="headerlink" href="#093-2022-01-20" title="Permanent link">&para;</a></h2>
+<h3 id="fixed_5">Fixed<a class="headerlink" href="#fixed_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Load the correct mac arm artifact on M1 machines</li>
+<li>Generate fake View.id for consistent colors for accessibility entries when views are modified</li>
+</ul>
+<p>Kudos to @geoff-powell, @nicbell for their contributions this release!</p>
+<h2 id="092-2022-01-20"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.9.2">0.9.2</a> - 2022-01-20<a class="headerlink" href="#092-2022-01-20" title="Permanent link">&para;</a></h2>
+<p>Please ignore this release</p>
+<h2 id="091-2022-01-14"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.9.1">0.9.1</a> - 2022-01-14<a class="headerlink" href="#091-2022-01-14" title="Permanent link">&para;</a></h2>
+<h3 id="fixed_6">Fixed<a class="headerlink" href="#fixed_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Download mac arm artifact if on M1 machines</li>
+<li>Support for assets from transitive dependencies</li>
+<li>Add fix for ClassNotFoundException when using nonTransitiveRClass</li>
+<li>Update RELEASING notes to publish plugin marker artifact</li>
+<li>Avoid NPE in AccessibilityRenderExtension when layout params are not supplied</li>
+<li>Use View.id to generate consistent colors for accessibility entries when views are modified</li>
+</ul>
+<p>Kudos to @luis-cortes, @geoff-powell, @autonomousapps and @LuK1709 for their contributions this release!</p>
+<h2 id="090-2021-11-22"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.9.0">0.9.0</a> - 2021-11-22<a class="headerlink" href="#090-2021-11-22" title="Permanent link">&para;</a></h2>
+<h3 id="new_5">New<a class="headerlink" href="#new_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Migrate Paparazzi to layoutlib Arctic Fox 2020.3.1, providing native support for M1 machines</li>
+<li>Migrate Paparazzi to layoutlib 4.2, unlocking future Compose support</li>
+<li>Add support for projects enabling non-transitive resources</li>
+<li>RenderExtension now visits view hierarchy pre-rendering instead of layering bitmaps post-rendering</li>
+<li>Fail-fast when Bridge.init fails, usually due to native crash</li>
+<li>Expose RenderingMode as a configurable option</li>
+<li>Bump default compileSdk to API 30</li>
+<li>Improve Java-interoperability experience</li>
+<li>Kotlin 1.5.31</li>
+</ul>
+<h3 id="fixed_7">Fixed<a class="headerlink" href="#fixed_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Don&rsquo;t require Android plugin to be declared before Paparazzi plugin</li>
+<li>Clear AnimationHandler leak after each snapshot</li>
+<li>Don&rsquo;t generate empty mov files on snapshot failure</li>
+<li>Add Kotlin platform bom to prevent classpath conflicts during test builds</li>
+<li>Use correct default Android SDK path on Windows</li>
+<li>Use platform-agnostic file paths in Gradle artifacts to support remote caching across platforms</li>
+<li>Use platform-agnostic file paths in Javascript for web page support on Windows</li>
+<li>Fix font scaling issue in AccessibilityRenderExtension by using bundled font</li>
+</ul>
+<p>Kudos to @luis-cortes, @geoff-powell and @TWiStErRob for their contributions this release!</p>
+<h2 id="080-2021-10-07"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.8.0">0.8.0</a> - 2021-10-07<a class="headerlink" href="#080-2021-10-07" title="Permanent link">&para;</a></h2>
+<h3 id="new_6">New<a class="headerlink" href="#new_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Migrate Paparazzi to use native layoutlib for better rendering and API 30 support</li>
+<li>Add new extension for rendering accessibility metadata</li>
+<li>Add support for fontScale in DeviceConfig</li>
+<li>Add device config for Pixel 5</li>
+<li>Add tasks to Gradle task verification group</li>
+<li>Migrate publishing to gradle-maven-publish-plugin</li>
+<li>Migrate builds to Github Actions</li>
+<li>Migrate sample test from Burst to TestParameterInjector</li>
+<li>Kotlin 1.5.21</li>
+<li>[Gradle Plugin] Support for configuration caching</li>
+<li>[Gradle Plugin] Gradle 7.2</li>
+</ul>
+<h3 id="fixed_8">Fixed<a class="headerlink" href="#fixed_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add method interceptor for matrix multiplication operations</li>
+<li>Don&rsquo;t swallow FileNotFoundExceptions when overridden platform dir doesn&rsquo;t exist</li>
+<li>[Gradle Plugin] Fix remote caching bug by referencing relative, not absolute, paths in intermediate resources file.</li>
+</ul>
+<h2 id="071-2021-05-17"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.7.1">0.7.1</a> - 2021-05-17<a class="headerlink" href="#071-2021-05-17" title="Permanent link">&para;</a></h2>
+<h3 id="new_7">New<a class="headerlink" href="#new_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[Gradle Plugin] Support the &ndash;tests option for record/verify tasks</li>
+</ul>
+<h3 id="fixed_9">Fixed<a class="headerlink" href="#fixed_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[Gradle Plugin] Defer task configuration until created</li>
+</ul>
+<h2 id="070-2021-02-26"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.7.0">0.7.0</a> - 2021-02-26<a class="headerlink" href="#070-2021-02-26" title="Permanent link">&para;</a></h2>
+<h3 id="new_8">New<a class="headerlink" href="#new_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kotlin 1.4.30</li>
+<li>Add support for inline complex XML resources</li>
+<li>Enable <a href="https://github.com/square/burst">Burst</a> support</li>
+<li>Expose maximum percentage difference in image verification as a setting</li>
+<li>Render extension api to add extra information to snapshots</li>
+<li>Allow selection of night mode in DeviceConfig</li>
+<li>[Gradle Plugin] Gradle 6.8.3</li>
+<li>[Gradle Plugin] Creating an umbrella task to execute on all variants</li>
+</ul>
+<h3 id="fixed_10">Fixed<a class="headerlink" href="#fixed_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Properly execute Choreographer.doFrame after view has been laid out</li>
+<li>Fix broken text appearances when style resource names contain periods</li>
+<li>Fix ability to access asset files</li>
+<li>Use target-sdk to simulate device when available</li>
+<li>Always write screenshots to disk in record mode</li>
+<li>Don&rsquo;t crash when running on Java 12+</li>
+<li>[Gradle Plugin] Force test re-runs when a resource or asset has changed</li>
+<li>[Gradle Plugin] Force test re-runs if generated report or snapshot dirs are deleted</li>
+</ul>
+<h2 id="060-2020-10-02"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.6.0">0.6.0</a> - 2020-10-02<a class="headerlink" href="#060-2020-10-02" title="Permanent link">&para;</a></h2>
+<p>As of this release, consumers must build on Java 11 environments.</p>
+<h3 id="new_9">New<a class="headerlink" href="#new_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Point to a more recent version of layoutlib that runs on Android Q and builds with Java 11.</li>
+<li>Refactor Paparazzi to better support non-Gradle builds</li>
+<li>Added device configs for Pixel 4 series</li>
+</ul>
+<h2 id="052-2020-09-17"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.5.2">0.5.2</a> - 2020-09-17<a class="headerlink" href="#052-2020-09-17" title="Permanent link">&para;</a></h2>
+<h3 id="fixed_11">Fixed<a class="headerlink" href="#fixed_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[Gradle Plugin] Fixed record and verify tasks in multi-module projects.</li>
+</ul>
+<h2 id="051-2020-09-17"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.5.1">0.5.1</a> - 2020-09-17<a class="headerlink" href="#051-2020-09-17" title="Permanent link">&para;</a></h2>
+<h3 id="fixed_12">Fixed<a class="headerlink" href="#fixed_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[Gradle Plugin] Fixed race condition in record and verify tasks.</li>
+</ul>
+<h2 id="050-2020-09-16"><a href="https://github.com/cashapp/paparazzi/releases/tag/0.5.0">0.5.0</a> - 2020-09-16<a class="headerlink" href="#050-2020-09-16" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Initial release.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 Square, Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
